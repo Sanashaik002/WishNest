@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../App.css';
 
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://wishnest-backend.onrender.com';
 
 function Wishlist({ setIsLoggedIn, user,isDark, toggleTheme  }) {
   const [todo, setTodo] = useState('');
