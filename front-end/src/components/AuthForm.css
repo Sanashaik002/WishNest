@@ -1,0 +1,227 @@
+/* ---------- Auth Container ---------- */
+
+.welcome-heading {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #4b0082; /* Indigo/purple tone */
+  font-weight: bold;
+  text-shadow: 1px 1px #fff;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .auth-container {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+
+/* ---------- Heading ---------- */
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+body.dark-mode .auth-container h2 {
+  color: #f5f5f5;
+}
+
+/* ---------- Form Layout ---------- */
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---------- Inputs ---------- */
+.auth-container input {
+  padding: 10px 14px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.auth-container input:focus {
+  border-color: #4a90e2;
+}
+
+body.dark-mode .auth-container input {
+  background-color: #2b2b2b;
+  color: #f5f5f5;
+  border: 2px solid #555;
+}
+
+/* ---------- Submit Button ---------- */
+.auth-container button[type="submit"] {
+  padding: 10px;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-container button[type="submit"]:hover {
+  background-color: #3a78c2;
+}
+
+/* ---------- Text and Switch Link ---------- */
+.auth-container p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-container p button {
+  margin-left: 6px;
+  background: none;
+  color: #4a90e2;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.auth-container p button:hover {
+  color: #2a6ab3;
+}
+
+/* ---------- Password Visibility Wrapper ---------- */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* space for icon */
+}
+
+/* ---------- Eye Icon ---------- */
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #999;
+  cursor: pointer;
+}
+
+body.dark-mode .eye-icon {
+  color: #bbb;
+}
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field input {
+  flex: 1;
+  padding-right: 40px; /* to avoid text under icon */
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #888;
+}
+
+/* ---------- Google Login ---------- */
+.google-login-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.google-login-wrapper > div {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+
+.or-divider {
+  text-align: center;
+  margin-top: 10px;
+  color: #888;
+  font-size: 14px;
+  position: relative;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.or-divider::before {
+  left: 0;
+}
+
+.or-divider::after {
+  right: 0;
+}
+
+body.dark-mode .or-divider {
+  color: #ccc;
+}
+
+body.dark-mode .or-divider::before,
+body.dark-mode .or-divider::after {
+  background-color: #555;
+}
+
+/* Dark Mode Fallback */
+
+
+/* ---------- Updated Welcome Heading ---------- */
+
+
+.welcome-heading {
+  font-size: 2.5rem;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #6a0dad; /* Deep violet */
+  animation: glowPulseHeading 2.5s ease-in-out infinite;
+  text-shadow: 0 0 8px #fff, 0 0 15px #c471ed, 0 0 25px #53166e;
+}
+
+/* Dark Mode Support */
+body.dark-mode .welcome-heading {
+  color: #d0bfff;
+  animation: glowPulseDark 3s infinite ease-in-out;
+  text-shadow: 0 0 3px #000;
+}
+
+@keyframes glowPulseHeading {
+  0% {
+    text-shadow: 0 0 6px #fff, 0 0 12px #c471ed, 0 0 20px #8e44ad;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #d29cff, 0 0 30px #7d3cff;
+  }
+  100% {
+    text-shadow: 0 0 6px #fff, 0 0 12px #c471ed, 0 0 20px #8e44ad;
+  }
+}
+

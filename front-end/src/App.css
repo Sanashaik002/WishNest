@@ -1,0 +1,189 @@
+/* ---------------------- Base + Theme Toggle ---------------------- */
+body.light-mode {
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  transition: background 0.5s ease;
+  color: #000;
+}
+
+body.dark-mode {
+  background: linear-gradient(to right, #141e30, #243b55);
+  transition: background 0.5s ease;
+  color: #f5f5f5;
+}
+
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(100, 100, 100, 0.1);
+}
+
+body.light-mode .theme-toggle {
+  background-color: #ffffff;
+  color: #333;
+  border-color: #ccc;
+}
+
+body.light-mode .theme-toggle:hover {
+  background-color: #f0f0f0;
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #333333;
+  color: #f5f5f5;
+  border-color: #666;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: #444;
+}
+
+/* ---------------------- App Container ---------------------- */
+.App {
+  position: relative;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.App h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* ---------------------- Input and Add Button ---------------------- */
+.App input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  margin-right: 10px;
+  transition: border 0.2s ease-in-out;
+}
+
+.App input:focus {
+  border-color: #4a90e2;
+}
+
+.App button {
+  padding: 10px 16px;
+  font-size: 14px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.App button:hover {
+  background-color: #3a78c2;
+}
+
+/* ---------------------- Todo List Items ---------------------- */
+.App div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2e2e2e;   /* ✅ dark card */
+  color: #f5f5f5;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  accent-color: #4a90e2;
+}
+
+.strike-through {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.App div > div button {
+  background-color: #ff5c5c;
+  padding: 8px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+.App div > div button:hover {
+  background-color: #e24c4c;
+}
+
+/* ---------------------- Dark Mode Styles ---------------------- */
+body.dark-mode {
+  background-color: #000000;
+}
+body.light-mode .App div > div {
+  background-color: #ffffff;  /* white background */
+  color: #000000;
+  border: 1px solid #555;             /* black text */
+}
+
+
+.App.dark {
+  background-color: #2c2c2e; /* Dark slate gray – clean, readable */
+  color: #f5f5f5;
+}
+.App.dark h1 {
+  color: #ffffff;
+}
+
+.App.dark div > div {
+  background-color: #ffffff;   /* Light cards */
+  color: #000000;
+}
+
+.App.dark .strike-through {
+  color: #888 !important;
+}
+
+/* Keep label text black on white cards */
+.App.dark label span {
+  color: #000 !important;
+}
+
+.logout-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #e24c4c;
+}
