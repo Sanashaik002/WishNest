@@ -1,7 +1,8 @@
+**🌟 WishNest – Personal Wishlist Manager**
 
 WishNest is a simple yet creative full-stack web application that allows users to securely manage their personal wishlists or to-do items. Built using React, Node.js, Express, and MongoDB Atlas, it features a clean user interface, secure authentication (including Google login), and persistent cloud-based storage.
 
-🚀 Features
+**🚀 Features**
 ✨ Secure Signup/Login with JWT
 
 🔐 Google OAuth Login
@@ -14,11 +15,11 @@ WishNest is a simple yet creative full-stack web application that allows users t
 
 ⚙️ Fully deployed on Vercel and Render
 
-🧪 Try It Out!
+**🧪 Try It Out!**
 
-  👉 Live Demo: https://wish-nest.vercel.app
+  **👉 Live Demo**: https://wish-nest.vercel.app
 
-🔧 Tech Stack
+**🔧 Tech Stack**
   -> Layer	Technology
   
   -> Frontend	React, Axios, FontAwesome
@@ -31,7 +32,7 @@ WishNest is a simple yet creative full-stack web application that allows users t
   
   -> Deployment	Vercel (Frontend) + Render (Backend)
 
-🔒 Environment Variables
+**🔒 Environment Variables**
 To run locally, create a .env file inside the backend folder with:
 
   - MONGO_URI=your_mongodb_connection_string
@@ -40,7 +41,7 @@ To run locally, create a .env file inside the backend folder with:
     
   - On Vercel/Render, these variables are added via the dashboard as Environment Variables, not pushed to GitHub.
 
-📦 Folder Structure
+**📦 Folder Structure**
 
   todo-app/
   
@@ -50,7 +51,7 @@ To run locally, create a .env file inside the backend folder with:
   
   └── .env           → (Ignored) Stores secret keys locally
   
-🤝 Author
+**🤝 Author**
 
 Made with 💙 by Shaik Sana
 
