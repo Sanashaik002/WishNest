@@ -7,7 +7,7 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { jwtDecode } from 'jwt-decode';
 import { GoogleLogin } from '@react-oauth/google';
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://wishnest-backend.onrender.com";
 
 const AuthForm = ({ setIsLoggedIn, setUser ,isDark, toggleTheme}) => {
 
