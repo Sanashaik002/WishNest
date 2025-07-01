@@ -5,14 +5,15 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 const app = express();
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+
+app.use(cors({
+  origin: "https://wish-nest.vercel.app", 
+  credentials: true
+}));
 
 // Middleware
-app.use(cors());
 app.use(express.json());
+
 
 // Routes
 const authRoutes = require('./routes/authRoutes');
@@ -25,13 +26,18 @@ app.get('/', (req, res) => {
   res.send('API is running...');
 });
 
-mongoose.connect('mongodb://localhost:27017/todoapp', {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
 .then(() => {
-  console.log('MongoDB connected');
-  app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-})
-.catch(err => console.error(err));
+  console.log("MongoDB connected");
+}).catch(err => {
+  console.error("MongoDB connection error:", err);
+});
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
