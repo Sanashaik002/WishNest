@@ -187,3 +187,32 @@ body.light-mode .App div > div {
 .logout-button:hover {
   background-color: #e24c4c;
 }
+@media (max-width: 600px) {
+  .App {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .App h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  .App input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .App button {
+    width: 100%;
+  }
+
+  .theme-toggle,
+  .logout-button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
