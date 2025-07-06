@@ -224,4 +224,12 @@ body.dark-mode .welcome-heading {
     text-shadow: 0 0 6px #fff, 0 0 12px #c471ed, 0 0 20px #8e44ad;
   }
 }
-
+@media (max-width: 600px){
+  .welcome-heading {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #4b0082; /* Indigo/purple tone */
+  font-weight: bold;
+  text-shadow: 1px 1px #fff;
+ }
+}
